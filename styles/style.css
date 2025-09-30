@@ -84,7 +84,6 @@
 .cover__title span {
   font-size: 100px;
   font-weight: 700;
-  letter-spacing: 22px;
   text-transform: uppercase;
 }
 
@@ -94,14 +93,19 @@
 
 .aligned-text_left {
   text-align: left;
+  letter-spacing: 22px;
 }
 
 .aligned-text_center {
   text-align: center;
+  margin-top: 10px;
+  letter-spacing: 24px;
 }
 
 .aligned-text_right {
   text-align: right;
+  margin-top: 22px;
+  letter-spacing: 22px;
 }
 
 .cover__description {
