@@ -38,7 +38,7 @@
   width: 130px;
 }
 
-.header__address {
+.address {
   max-width: 240px;
   display: flex;
   flex-direction: column;
@@ -63,6 +63,7 @@
   background-size: cover;
   color: #fff;
   padding: 165px 50px 50px 50px;
+  z-index: 1;
 }
 
 .overlay {
@@ -72,13 +73,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  z-index: -1;
 }
 
 .cover__title,
 .cover__description {
   position: relative;
-  z-index: 2;
 }
 
 .cover__title span {
@@ -153,44 +153,49 @@
   justify-content: space-between;
   align-items: center;
   gap: 25px;
+  flex-wrap: wrap;
   list-style: none;
   margin-top: 27px;
   margin-bottom: 30px;
+  z-index: 1;
 }
 
 .lots__card-list-item {
   position: relative;
-  height: 596px;
+  min-height: 596px;
   width: 334px;
-  padding: 48px 40px;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  z-index: 1;
 }
 
 .card_type_film {
-  background: url(../images/card-lot-01.jpg) no-repeat center center;
-  background-size: cover;
+  background: url(../images/card-lot-01.jpg);
 }
 
 .card_type_book {
-  background: url(../images/card-lot-02.jpg) no-repeat center center;
-  background-size: cover;
+  background: url(../images/card-lot-02.jpg);
 }
 
 .card_type_picture {
-  background: url(../images/card-lot-03.jpg) no-repeat center center;
-  background-size: cover;
+  background: url(../images/card-lot-03.jpg);
 }
 
 .card-link {
-  height: 100%;
+  display: block;
   color: #fff;
   text-decoration: none;
+  width: 100%;
+  height: 100%;
+  padding: 48px 40px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  min-height: 500px;
 }
 
 .card__title {
@@ -204,11 +209,6 @@
   font-size: 20px;
   line-height: 1.2;
   text-decoration: none;
-}
-
-.card__title,
-.card__text {
-  z-index: 2;
 }
 
 .lots__look-more-link {
@@ -281,14 +281,16 @@
   flex-direction: column;
   font-size: 18px;
   font-weight: 400;
-  line-height: 1.5;
   font-style: normal;
+  line-height: 1.2;
 }
 
 .footer__menu-list {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .footer__menu-list-item {
